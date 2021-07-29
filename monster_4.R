@@ -53,7 +53,7 @@ plot(hard_cv)
 load(file = "data/factor_analysis_abstracts.RData")
 # load(file = "data/graph_twitter.RData")
 
-cv_fa = eigcv(A_fa, k_max = 10, bootstrap = 1)
+cv_fa = gdim::eigcv(A_fa, k_max = 10, bootstrap = 1)
 plot(cv_fa)
 
 

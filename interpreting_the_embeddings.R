@@ -19,7 +19,7 @@ top_loadings(fa_journal$Y, uniqueJournals) %>% View
 
 
 load(file = "data/graph_twitter.RData")
-fa_twitter =  vsp(graph_twitter, rank = 10, scale = T)
+fa_twitter =  vsp(graph_twitter, rank = 20, scale = T)
 
 
 # we have lots of information about the nodes in the graph:
@@ -34,10 +34,10 @@ handles = node_info$screen_name
 
 
 # fa_twitter =  vsp(graph_twitter, rank = 10, scale = T)
-top_loadings(fa_twitter$Y, handles) %>% View
-bff_with_words(fa_twitter$Y, bios,7) %>% View
-
-
+topaccounts = top_loadings(fa_twitter$Y, handles)
+bffs = bff_with_words(fa_twitter$Y, bios,7)
+View(bffs)
+topaccounts %>% t %>% View
 
 # load(file = "data/factor_analysis_abstracts.RData")
 # fa_fa = vsp(A_fa, rank = 10, scale = T)  # this takes ~1 minute.

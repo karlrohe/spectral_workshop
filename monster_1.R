@@ -3,6 +3,7 @@ library(Matrix)
 library(fastRG)
 library(RSpectra)
 library(tidyverse)
+library(tidygraph)
 library(vsp)
 source("src.R")
 
